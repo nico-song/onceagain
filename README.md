@@ -13,7 +13,7 @@ Songs you love get played TWICE :), because once is never enough!
 - Keyboard controls that map to steering wheel style buttons
 - Debug overlay showing buffer fill and audio underruns
 
-## How it works
+## Threads
 
 Three threads:
 
