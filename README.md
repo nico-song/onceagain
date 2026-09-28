@@ -3,7 +3,7 @@
 A sleek in-car style music player written in C++20 with raylib.
 Songs you love get played twice (an encore), because once is never enough.
 
-![screenshot](docs/screenshot.png)
+![demo](docs/demo.gif)
 
 ## Features
 
