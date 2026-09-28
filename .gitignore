@@ -1,0 +1,7 @@
+build/
+music/*
+!music/.gitkeep
+loved.txt
+.DS_Store
+.vscode/
+.idea/
