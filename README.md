@@ -1,15 +1,15 @@
 # onceagain
 
-A sleek in-car style music player written in C++20 with raylib.
-Songs you love get played twice (an encore), because once is never enough.
+An in car style music player written in C++20 with raylib :) made to play TWICE songs. (but i guess TECHNICALLY you could play any song on it...)
+Songs you love get played TWICE :), because once is never enough!
 
 ![screenshot](docs/screenshot.png)
 
 ## Features
 
-- Now Playing screen with album art, theme color pulled from the cover art, live spectrum visualizer
-- Love a song and it plays one more time when it ends, with a "ONCE AGAIN" badge
-- Queue panel with thumbnails, click to play, scroll wheel
+- Now Playing screen with album art, theme color pulled from the cover art (avg color), live spectrum visualizer
+- Love a song and it plays one more time when it ends, w/ "ONCE AGAIN" indicator (ONCE is the TWICE fan name)
+- Queue panel with thumbnails, click to play, scroll wheel etc.
 - Keyboard controls that map to steering wheel style buttons
 - Debug overlay showing buffer fill and audio underruns
 
@@ -27,7 +27,7 @@ main (ui) <---------- visualizer ring buffer (mono samples) ------------+
 - **Streamer thread** decodes the file and fills a lock-free SPSC ring buffer
 - **Audio thread** (raylib callback) pulls samples from the ring. It never locks or allocates, so a slow UI frame can't cause audio glitches
 - Seeking or switching songs asks the audio thread to drain the ring, since only the consumer is allowed to move the read index
-- The ring buffer has a 5 million item two-thread stress test (`tests/ring_test.cpp`), clean under ThreadSanitizer
+- The ring buffer has a 5 million item 2 thread stress test (`tests/ring_test.cpp`), clean under ThreadSanitizer
 
 ## Build
 
@@ -43,8 +43,8 @@ Run it from the repo root so it finds `music/` and `assets/`.
 ## Adding music
 
 Put your own audio files in `music/` named `Artist - Title.mp3` (mp3, wav, ogg).
-For cover art, add a PNG with the same name: `Artist - Title.png`.
-The music folder is gitignored so no songs end up in the repo.
+For cover art, add a PNG with the same name: `Artist - Title.png`. (you can also rename .jpg to .png and it works)
+The music folder is gitignored so no songs end up in the repo. (aka no TWICE copyright!)
 
 ## Controls
 
